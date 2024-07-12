@@ -1,3 +1,8 @@
+import { decodeMulticallUniswap } from "./utilities/decodeMulticallUniswap";
+import { stringifyBI } from "./utilities/stringifyBI";
+
+window.decode = decodeMulticallUniswap;
+window.stringify = stringifyBI;
 function App() {
   return (
     <>
