@@ -1,5 +1,6 @@
-import { decodeFunctionData, Hex, isHex } from "viem";
+import { decodeFunctionData, isHex } from "viem";
 import { abi } from "./abis/uniPositionManagerV3";
+import { stringifyBI } from "./stringifyBI";
 
 export const decodeMulticallUniswap = ({ callData }: { callData: string }) => {
   if (!isHex(callData)) {
@@ -14,5 +15,5 @@ export const decodeMulticallUniswap = ({ callData }: { callData: string }) => {
   const decodedCalls = calls.map((call) => {
     return decodeFunctionData({ abi, data: call });
   });
-  return decodedCalls;
+  return stringifyBI(decodedCalls, 4);
 };
