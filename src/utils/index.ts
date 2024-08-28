@@ -1,3 +1,3 @@
 export * from "./cx";
-export * from "./decodeMulticallUniswap";
+export * from "./decodeSingeltonMulticall";
 export * from "./stringifyBI";
