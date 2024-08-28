@@ -15,7 +15,7 @@ const DecodeUniV3: React.FC<{ className?: string }> = ({ className }) => {
         rows={5}
         cols={40}
       />
-      <textarea rows={40}>{decoded?.toString()}</textarea>
+      <textarea value={decoded?.toString()} rows={40}></textarea>
     </div>
   );
 };
