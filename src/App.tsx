@@ -1,7 +1,9 @@
 import { DecodeUniV3 } from "./components";
 import { decodeMulticallUniswap, stringifyBI } from "./utils";
 
+//@ts-expect-error aaa
 window.decode = decodeMulticallUniswap;
+//@ts-expect-error aaa
 window.stringify = stringifyBI;
 
 function App() {
